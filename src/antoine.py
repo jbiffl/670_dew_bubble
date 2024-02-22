@@ -1,3 +1,4 @@
+import numpy as np
 def antoine( a, T):
     """    
         Ps = antoine( a, T)
@@ -22,6 +23,20 @@ def antoine( a, T):
         Code originally by: James C. Sutherland
         Modified by: Tyler R. Josephson
     """
+    try:
+        a = np.array(a)
+        if a.ndim == 1:
+            Ps = 10.0**( a[0] - a[1] / ( a[2] + T ) )
+        elif a.ndim == 2:
+            Ps = 10.0**( a[:,0] - a[:,1] / ( a[:,2] + T ) )
+        else:
+            Ps = 'a'
+        Ps/1.0
+    except TypeError:
+        print("Invalid array type. Must be 1-d or 2-d as in docstring.")
+
+         
+    #Ps = 10.0**( a[:,0] - a[:,1] / ( a[:,2] + T ) )
     
-    Ps = 10.0**( a[:,0] - a[:,1] / ( a[:,2] + T ) )
+    #Ps = 10.0**( a[:,0] - a[:,1] / ( a[:,2] + T ) )
     return Ps
