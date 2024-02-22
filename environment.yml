@@ -5,8 +5,8 @@ channels:
   - anaconda-fusion
   - defaults
 dependencies:
-  - beautifulsoup4=4.12.3=pyha770c72_0
-  - numpy=1.26.4=py312h8753938_0
-  - requests=2.31.0=pyhd8ed1ab_0
-  - scipy=1.12.0=py312h8753938_2
+  - beautifulsoup4=4.12.3
+  - numpy=1.26.4
+  - requests=2.31.0
+  - scipy=1.12.0
 
