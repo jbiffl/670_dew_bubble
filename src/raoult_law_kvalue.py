@@ -1,4 +1,4 @@
-from antoine import antoine
+from src.antoine import antoine
 import numpy as np
 
 def raoult_law_kvalue( T, P, a, *gamma):
